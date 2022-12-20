@@ -1,0 +1,23 @@
+//MATLAB code
+clear all
+close all
+num1=[0 0.0011];
+den1=[1 -0.0351 -0.9037];
+G1=tf(num1,den1);
+rlocus(G1)
+hold on
+num2=[0 3.1290];
+den2=[1 -0.2072 0.4907];
+G2=tf(num2,den2);
+rlocus(G2,'g')
+hold on
+num4=[0 10.2592];
+den4=[1 -1.0051 1.000];
+G4=tf(num4,den4);
+rlocus(G4,'b')
+hold on
+num5=[0 -0.5819];
+den5=[1 -1.6580 0.7349];
+G5=tf(num5,den5);
+rlocus(G5,'c')
+legend({'Moisture sensor','Buzzer','LED','Motor','LCD Display'},'Location','northeast')
